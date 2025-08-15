@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Price Predictor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Property Price Predictor</h1>
+    <input type="text" id="searchInput" placeholder="Search by Location or Society">
+  </header>
+
+  <section class="filters">
+    <form id="propertyForm">
+      <div class="filter-group">
+        <label for="total_sqft">Total Area (Sqft)</label>
+        <select id="total_sqft">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="bedrooms">Bedrooms</label>
+        <select id="bedrooms">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="bathrooms">Bathrooms</label>
+        <select id="bathrooms">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="location">Location</label>
+        <select id="location">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="min_price">Min Price (Lakhs)</label>
+        <input type="number" id="min_price" placeholder="0">
+      </div>
+
+      <div class="filter-group">
+        <label for="max_price">Max Price (Lakhs)</label>
+        <input type="number" id="max_price" placeholder="9999">
+      </div>
+
+      <div class="filter-group">
+        <label for="sort_price">Sort By Price</label>
+        <select id="sort_price">
+          <option value="low">Low to High</option>
+          <option value="high">High to Low</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="filterProperties()">Show Properties</button>
+      <button type="button" onclick="resetFilters()">Reset</button>
+    </form>
+  </section>
+
+  <section class="property-grid" id="propertyGrid">
+    <!-- Property cards inserted here -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
